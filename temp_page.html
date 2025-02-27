@@ -122,24 +122,20 @@
                 "autoplay": false           /* Disable autoplay */
             }'>
                 
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <!-- Image layers for desktop and mobile -->
-                        <div class="image-layer desktop-image"></div>
-                        <div class="image-layer mobile-image"></div>
-        
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="main-slider__content">
-                                        <h2 class="main-slider__title text-uppercase">
-                                            <br><br><br><br><br>
-                                        </h2>
-                                    </div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <!-- Image layers for desktop and mobile -->
+                    <div class="image-layer desktop-image"></div>
+                    <div class="image-layer mobile-image"></div>
+            
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="main-slider__content">
+                                    <h2 class="main-slider__title text-uppercase"></h2>
                                 </div>
                             </div>
                         </div>
-        
                     </div>
                 </div>
             </div>
@@ -147,109 +143,92 @@
         
 
 <style>
-/* Remove dark overlay and show the image clearly */
+/* 🌐 Common Styles */
+.image-layer {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1 !important;
+}
 
-/* Desktop Image */
+/* 🖥️ Desktop Image */
 .image-layer.desktop-image {
     background-image: url(assets/images/resources/One2.jpg);
     margin-top: 90px;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
     display: block;
-    opacity: 1 !important;
-}
-.image-layer.desktop-image {
-    background-image: url(assets/images/resources/One2.jpg);
-    margin-top: 90px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
-    display: block;
-    opacity: 1 !important;
 }
 
-/* Make it responsive for M1 MacBook (2560 × 1600) */
-@media (min-width: 2560px) and (max-height: 1600px) {
-    .image-layer.desktop-image {
-        background-size: contain; /* Ensure full image is visible */
-        height: 90vh; /* Adjust height as needed */
-        margin-top: 50px; /* Reduce top margin */
-    }
-}
-/* ✅ Make it responsive for MacBook M1 14-inch (3024 × 1964) */
-@media (min-width: 3024px) and (max-height: 1964px) {
-    .image-layer.desktop-image {
-        background-size: contain; /* Ensure full image is visible */
-        height: 90vh; /* Consistent with 2560 × 1600 styling */
-        margin-top: 50px; /* Maintain reduced top margin */
-    }
-    .main-slider .container{
-        position: relative !important;
-    padding-top: 1200px !important;
-    padding-bottom: 100px !important;
-    z-index: 30;
-    }
-}
-
-/* ✅ Make it responsive for MacBook M1 16-inch (3456 × 2234) */
-@media (min-width: 3456px) and (max-height: 2234px) {
-    .image-layer.desktop-image {
-        background-size: contain; /* Ensure full image is visible */
-        height: 110vh; /* Consistent with other large screens */
-        margin-top: 50px; /* Maintain reduced top margin */
-    }
-   
-}
-
-/* Mobile Image */
+/* 📱 Mobile Image */
 .image-layer.mobile-image {
-    background-image: url(assets/images/resources/one\ mobile\ hero.png);
-    
+    background-image: url(assets/images/resources/EramobileheroNew.png.jpg);
     background-size: cover;
-    
-    background-position: center center; /* Center the image */
-    
-    width: 100%;
-    height: 100vh;
     display: none;
     justify-content: center;
     align-items: center;
-    opacity: 1 !important;
 }
 
-/* Remove any pseudo-element overlays */
+/* 🧹 Remove Overlays */
 .image-layer::before {
     content: none !important;
     background: none !important;
     opacity: 1 !important;
 }
 
-/* Responsive Styles */
+/* 📲 Mobile Styles */
 @media (max-width: 768px) {
     .image-layer.desktop-image {
         display: none;
     }
     .image-layer.mobile-image {
         display: block;
-        background-image: url(assets/images/resources/one\ mobile\ hero.png);
+        background-image: url(assets/images/resources/onemobilehero3.png);
         margin-top: 90px;
         background-size: contain;
-        background-position: center center;
-        background-repeat: no-repeat;
         width: 130%;
-        height: 100vh;
-        opacity: 1 !important;
     }
-    
-    /* Adjust text size and spacing for mobile */
+
+    /* Adjust text size */
     .main-slider__title {
         font-size: 2rem !important;
         line-height: 2.5rem !important;
+    }
+}
+
+/* 💻 MacBook & High-Resolution Screens */
+@media (min-width: 1440px) {
+    .image-layer.desktop-image {
+        background-size: cover;
+        height: 100vh;
+    }
+}
+
+/* 🖥️ MacBook 13-inch (2560 × 1600) */
+@media (min-width: 2560px) and (max-height: 1600px) {
+    .image-layer.desktop-image {
+        height: 100vh;
+    }
+}
+
+/* 💻 MacBook 14-inch (3024 × 1964) */
+@media (min-width: 3024px) and (max-height: 1964px) {
+    .image-layer.desktop-image {
+        height: 100vh;
+    }
+}
+
+/* 🖥️ MacBook 16-inch (3456 × 2234) */
+@media (min-width: 3456px) and (max-height: 2234px) {
+    .image-layer.desktop-image {
+        height: 100vh;
+    }
+}
+@media (min-width: 3024px) and (max-height: 1964px) {
+    .image-layer.desktop-image {
+        background-size: contain; /* Ensure the full image is visible */
+        height: 0vh; /* Maintain consistent height */
+        margin-top: 50px; /* Reduce top margin */
     }
 }
 </style>
@@ -453,10 +432,11 @@
                                 <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                                     <div class="feature-one__single">
                                         <div class="feature-one__single-inner">
+                                            <!-- new -->
                                             <div class="feature-one__icon"><span class="icon-condominium"></span></div>
                                             <h3 class="feature-one__title"><a href="javascript:void(0);">Prime Plot</a></h3>
                                             <p class="feature-one__text">
-                                                Introducing Progressive One, an exclusive collection of 4.5 BHK apartments nestled in a prestigious Brownfield Project in the heart of Vashi.
+                                                Introducing Progressive One, an exclusive collection of 4.5 BHK apartments in a prestigious Brownfield Project at the heart of Vashi.
                                             </p>
                                             <div class="feature-one__btn"><a href="javascript:void(0);" class="get-info"
                                                     data-label="Download Brochure" data-cta="Get Details"> <i
@@ -468,9 +448,9 @@
                                     <div class="feature-one__single">
                                         <div class="feature-one__single-inner">
                                             <div class="feature-one__icon"><span class="icon-sustainable"></span></div>
-                                            <h3 class="feature-one__title"><a href="javascript:void(0);">Lifestyle
-                                                    Podium</a></h3>
-                                            <p class="feature-one__text"> Each residence is a masterpiece of design, featuring expansive interiors, soaring ceilings, and panoramic views of 25 acres of lush open space.</p>
+                                            <h3 class="feature-one__title"><a href="javascript:void(0);">Elevated Living
+                                            </a></h3>
+                                            <p class="feature-one__text"> A seamless blend of space and serenity, where modern luxury meets urban vibrancy in a home built for the extraordinary.</p>
                                             <div class="feature-one__btn"><a href="javascript:void(0);" class="get-info"
                                                     data-label="Download Brochure" data-cta="Get Details"> <i
                                                         class="fa fa-arrow-right"></i>Know More</a></div>
@@ -481,10 +461,11 @@
                                     <div class="feature-one__single">
                                         <div class="feature-one__single-inner">
                                             <div class="feature-one__icon"><span class="icon-world"></span></div>
-                                            <h3 class="feature-one__title"><a href="javascript:void(0);">Attractive
-                                                    Location</a></h3>
+                                            <h3 class="feature-one__title"><a href="javascript:void(0);">Unparalleled Privacy
+                                            </a></h3>
                                             <p class="feature-one__text">
-                                                Enjoy ultimate privacy with just one residence per floor, delivering an oasis of calm amidst urban vibrancy. 
+                                                One floor, one residence—offering unmatched exclusivity with breathtaking views overlooking 25 acres of open space.
+ 
                                             </p>
                                             <div class="feature-one__btn"><a href="javascript:void(0);" class="get-info"
                                                     data-label="Download Brochure" data-cta="Get Details"> <i
@@ -496,10 +477,11 @@
                                     <div class="feature-one__single">
                                         <div class="feature-one__single-inner">
                                             <div class="feature-one__icon"><span class="icon-living-room"></span></div>
-                                            <h3 class="feature-one__title"><a href="javascript:void(0);">Luxury
+                                            <h3 class="feature-one__title"><a href="javascript:void(0);">Luxury Redefined
+
                                                     </a></h3>
                                             <p class="feature-one__text">
-                                                Embrace the Progressive One experience—where every sunrise greets you with elegance, and every sunset leaves you in awe.
+                                                Wake up to grandeur in a thoughtfully designed home with expansive interiors, grand ceiling heights, and 10-feet clear height, elevating your living experience.
                                             </p>
                                             <div class="feature-one__btn"><a href="javascript:void(0);" class="get-info"
                                                     data-label="Download Brochure" data-cta="Get Details"> <i
@@ -577,7 +559,7 @@
                 <div class="floor-plan__main-tab-box tabs-box">
                     <ul class="tab-buttons clearfix list-unstyled">
                         <li data-tab="#typical-plan" class="tab-btn active-btn"><span>Typical Floor Plan</span></li>
-                        <li data-tab="#811-plan" class="tab-btn"><span>Ground floor plan</span></li>
+                        <!-- <li data-tab="#811-plan" class="tab-btn"><span>Ground floor plan</span></li> -->
                         <!-- <li data-tab="#13-plan" class="tab-btn"><span>13 Floor Plan</span></li> -->
                     </ul>
                     <div class="tabs-content">
@@ -836,6 +818,15 @@
         </section>
         
         <style>
+
+/* .main-slider .container {
+    position: relative !important;
+    padding-top: 800px !important;
+    padding-bottom: 100px !important;
+    z-index: 30 !important;
+} */
+
+
 /* Container for the Map */
 /* Container for the Map */
 .map-container {
@@ -1042,11 +1033,13 @@
         </section>
         <footer class="site-footer">
             <div class="site-footer__top">
-                <div class="site-footer__shape-1 float-bob-x"><img
-                        src="assets/images/shapes/site-footer-shape-1.png" alt=""></div>
+                <div class="site-footer__shape-1 float-bob-x">
+                    <img src="assets/images/shapes/site-footer-shape-1.png" alt="">
+                </div>
                 <div class="container">
                     <div class="site-footer__top-inner">
                         <div class="row">
+                            <!-- About Section with Social Icons and Maharera Info -->
                             <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                                 <div class="footer-widget__column footer-widget__about">
                                     <div class="footer-widget__about-text-box">
@@ -1058,8 +1051,51 @@
                                         <a href=""><i class="fab fa-facebook"></i></a>
                                         <a href=""><i class="fab fa-instagram"></i></a>
                                     </div>
+                                    
+                                    <!-- New Section for QR Code, Maharera Number, and Logo -->
+                                    <div class="footer-widget__maharera">
+                                        <div class="maharera-content">
+                                            <!-- ONE_QR Image -->
+                                            <img src="assets/images/resources/ONE_QR.png" alt="QR Code" class="maharera-qr">
+                                            
+                                            <!-- Maharera Number -->
+                                            <p class="maharera-number">Maharera No. P51700054296</p>
+                                            
+                                            <!-- Maharera Logo -->
+                                            <img src="assets/images/resources/Maharera_logo.png" alt="Maharera Logo" class="maharera-logo">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+        <style>
+          .footer-widget__maharera {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.maharera-content {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    gap: 10px;
+}
+
+.maharera-qr, .maharera-logo {
+    width: 80px; /* Increased size for better visibility */
+    height: auto;
+}
+
+.maharera-number {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+        </style>
+                            <!-- Contact Section -->
                             <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                                 <div class="footer-widget__column footer-widget__Explore">
                                     <div class="footer-widget__title-box">
@@ -1069,19 +1105,15 @@
                                         <li>
                                             <div class="icon"><span class="fas fa-phone-alt"></span></div>
                                             <div class="text">
-                                                <p>
-                                                    <a href="tel:+9167770114">+9167770114</a>
-                                                </p>
-                                                
-                                                <p>
-                                                    <a href="tel:+9167770104">+9167770104</a>
-                                                </p>
+                                                <p><a href="tel:+9167770114">+9167770114</a></p>
+                                                <p><a href="tel:+9167770104">+9167770104</a></p>
                                             </div>
-                                            
                                         </li>
                                     </ul>
                                 </div>
                             </div>
+        
+                            <!-- Find Section -->
                             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                                 <div class="footer-widget__column footer-widget__find">
                                     <div class="footer-widget__title-box">
@@ -1090,27 +1122,20 @@
                                     <ul class="footer-widget__Explore-list list-unstyled">
                                         <li>
                                             <a href="https://maps.app.goo.gl/arPXnPP1EejkwMTX8" target="_blank">
-                                            
-                                                Progressive One, Sector 4, Vashi,Navi Mumbai,<br />Maharashtra 410206
+                                                Progressive One, Sector 4, Vashi, Navi Mumbai,<br />Maharashtra 410206
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
+        
+                            <!-- Visit Section -->
                             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                                 <div class="footer-widget__column footer-widget__Contact">
                                     <div class="footer-widget__title-box">
                                         <h3 class="footer-widget__title">Visit</h3>
                                     </div>
                                     <ul class="footer-widget__Contact-list list-unstyled">
-                                        <!-- <li>
-                                            <div class="icon"><span class="fas fa-phone-alt"></span></div>
-                                            <div class="text">
-                                                <p>
-                                                    <a href="tel:+91 98765 43210">+9167773322</a>
-                                                </p>
-                                            </div>
-                                        </li> -->
                                         <li>
                                             <div class="icon"><span class="fas fa-clock"></span></div>
                                             <div class="text">
@@ -1120,7 +1145,7 @@
                                         <li>
                                             <div class="icon"><span class="fas fa-envelope"></span></div>
                                             <div class="text">
-                                                <p><a href="mailto:info@invictaeclat.com">sales@progressivegroup.in</a></p>
+                                                <p><a href="mailto:sales@progressivegroup.in">sales@progressivegroup.in</a></p>
                                             </div>
                                         </li>
                                     </ul>
@@ -1130,20 +1155,26 @@
                     </div>
                 </div>
             </div>
+        
+            <!-- Footer Bottom -->
             <div class="site-footer__bottom">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
-                                <p class="site-footer__bottom-text">&copy; All Rights Reserved.<span
-                                        class="d-block float-md-end small">Powered by <a href="https://tech2edge.co/"
-                                            class="text-white" target="_blank">Tech2Edge</a></span></p>
+                                <p class="site-footer__bottom-text">
+                                    &copy; All Rights Reserved.
+                                    <span class="d-block float-md-end small">
+                                        Powered by <a href="https://tech2edge.co/" class="text-white" target="_blank">Tech2Edge</a>
+                                    </span>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
+        
     </div>
     <div class="mobile-nav__wrapper">
         <div class="mobile-nav__overlay mobile-nav__toggler"></div>
