@@ -143,10 +143,10 @@
         
 
 <style>
-/* 🌐 Common Styles */
+
 .image-layer {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 1 !important;
@@ -175,14 +175,7 @@
     background: none !important;
     opacity: 1 !important;
 }
-/* Make it responsive for M1 MacBook (2560 × 1600) */
-@media (min-width: 2560px) and (max-height: 1600px) {
-    .image-layer.desktop-image {
-        background-size: contain; /* Ensure full image is visible */
-        height: 90vh; /* Adjust height as needed */
-        margin-top: 50px; /* Reduce top margin */
-    }
-}
+
 /* 📲 Mobile Styles */
 @media (max-width: 768px) {
     .image-layer.desktop-image {
@@ -203,41 +196,39 @@
     }
 }
 
-/* 💻 MacBook & High-Resolution Screens */
-@media (min-width: 1440px) {
+/* 💻 MacBook Styles */
+@media (min-width: 1280px) and (max-width: 1600px) {
     .image-layer.desktop-image {
         background-size: cover;
-        height: 100vh;
+        margin-top: 70px;
+    }
+
+    .main-slider__title {
+        font-size: 3rem !important;
+        line-height: 3.5rem !important;
     }
 }
 
-/* 🖥️ MacBook 13-inch (2560 × 1600) */
-@media (min-width: 2560px) and (max-height: 1600px) {
+/* 🖥️ Larger MacBook Pro Styles */
+@media (min-width: 1601px) and (max-width: 2560px) {
     .image-layer.desktop-image {
-        height: 100vh;
+        background-size: cover;
+        margin-top: 50px;
+    }
+    .main-slider .container {
+    position: relative;
+    padding-top: 1000px;
+    padding-bottom: 100px;
+    z-index: 30;
+    }
+    
+    .main-slider__title {
+        font-size: 3.5rem !important;
+        line-height: 4rem !important;
     }
 }
 
-/* 💻 MacBook 14-inch (3024 × 1964) */
-@media (min-width: 3024px) and (max-height: 1964px) {
-    .image-layer.desktop-image {
-        height: 100vh;
-    }
-}
 
-/* 🖥️ MacBook 16-inch (3456 × 2234) */
-@media (min-width: 3456px) and (max-height: 2234px) {
-    .image-layer.desktop-image {
-        height: 100vh;
-    }
-}
-@media (min-width: 3024px) and (max-height: 1964px) {
-    .image-layer.desktop-image {
-        background-size: contain; /* Ensure the full image is visible */
-        height: 0vh; /* Maintain consistent height */
-        margin-top: 50px; /* Reduce top margin */
-    }
-}
 </style>
         <section id="about" class="about-one" 
   style="background: url('https://progressivegroup.in/ppc/wp-content/uploads/2021/09/Progressive-Elevation-png.png') repeat center center;">
