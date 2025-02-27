@@ -175,7 +175,14 @@
     background: none !important;
     opacity: 1 !important;
 }
-
+/* Make it responsive for M1 MacBook (2560 × 1600) */
+@media (min-width: 2560px) and (max-height: 1600px) {
+    .image-layer.desktop-image {
+        background-size: contain; /* Ensure full image is visible */
+        height: 90vh; /* Adjust height as needed */
+        margin-top: 50px; /* Reduce top margin */
+    }
+}
 /* 📲 Mobile Styles */
 @media (max-width: 768px) {
     .image-layer.desktop-image {
