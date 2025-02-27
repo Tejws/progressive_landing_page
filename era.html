@@ -149,11 +149,11 @@
 <style>
 /* Remove dark overlay and show the image clearly */
 
-/* Desktop Image */
+/* 🖥️ Desktop Image */
 .image-layer.desktop-image {
     background-image: url(assets/images/resources/Era-hero-image.jpg.webp);
     margin-top: 90px;
-    background-size:contain;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
@@ -162,15 +162,12 @@
     opacity: 1 !important;
 }
 
-
-/* Mobile Image */
+/* 📱 Mobile Image */
 .image-layer.mobile-image {
     background-image: url(assets/images/resources/EramobileheroNew.png.jpg);
-    
     background-size: cover;
-    
-    background-position: center center; /* Center the image */
-    
+    background-position: center center;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     display: none;
@@ -179,14 +176,14 @@
     opacity: 1 !important;
 }
 
-/* Remove any pseudo-element overlays */
+/* 🧹 Remove Overlays */
 .image-layer::before {
     content: none !important;
     background: none !important;
     opacity: 1 !important;
 }
 
-/* Responsive Styles */
+/* 📲 Mobile Styles */
 @media (max-width: 768px) {
     .image-layer.desktop-image {
         display: none;
@@ -202,43 +199,56 @@
         height: 100vh;
         opacity: 1 !important;
     }
-    
-    /* Adjust text size and spacing for mobile */
+
+    /* Adjust text size for mobile */
     .main-slider__title {
         font-size: 2rem !important;
         line-height: 2.5rem !important;
     }
 }
-@media (min-width: 1440px) {
+
+/* 💻 MacBook Styles */
+@media (min-width: 1280px) and (max-width: 1600px) {
     .image-layer.desktop-image {
-        background-size: cover;
-        height: 100vh; /* Adjust as needed */
+        margin-top: 70px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
     }
-    /* For MacBook M1 13-inch (2560 × 1600) */
-@media (min-width: 2560px) and (max-height: 1600px) {
-    .image-layer.desktop-image {
-        background-size: cover;
-        height: 60vh; /* Adjust as needed */
+
+    .main-slider__title {
+        font-size: 3rem !important;
+        line-height: 3.5rem !important;
     }
 }
 
-/* For MacBook M1 14-inch (3024 × 1964) */
-@media (min-width: 3024px) and (max-height: 1964px) {
+/* 🖥️ Larger MacBook Pro Styles */
+@media (min-width: 1601px) and (max-width: 2560px) {
     .image-layer.desktop-image {
-        background-size: cover;
-        height: 60vh; /* Adjust as needed */
+        margin-top: 50px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
     }
+
+    .main-slider__title {
+        font-size: 3.5rem !important;
+        line-height: 4rem !important;
+    }
+    .main-slider .container {
+    position: relative;
+    padding-top: 1300px;
+    padding-bottom: 100px;
+    z-index: 30;
+}
 }
 
-/* For MacBook M1 16-inch (3456 × 2234) */
-@media (min-width: 3456px) and (max-height: 2234px) {
-    .image-layer.desktop-image {
-        background-size: cover;
-        height: 60vh; /* Adjust as needed */
-    }
-}
 
-}
+
 </style>
 
         <section id="about" class="about-one" 
