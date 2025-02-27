@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Laginchy';
+    src: local('Laginchy-Regular'),
+        url('Laginchy-Regular.otf') format('otf'),
+        url('Laginchy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Laginchy';
+    src: local('Laginchy-Bold'),
+        url('Laginchy-Bold.otf') format('otf'),
+        url('Laginchy-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
