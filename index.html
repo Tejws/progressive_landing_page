@@ -1,33 +1,1191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button Navigation</title>
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f5f5f5;
-            margin: 0;
-        }
-        .btn-container {
-            display: flex;
-            gap: 20px;
-        }
-    </style>
+    <title>Progressive One</title>
+    <meta name="charset" content="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="assets/images/favicon/favicon.png" rel="icon">
+    <link href="assets/images/favicon/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/plugins.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/aports-icons/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/laginchy-quirky/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.min.css">
 </head>
-<body>
-    <div class="btn-container">
-        <a href="era.html" class="btn btn-primary btn-lg">Go to Era Page</a>
-        <a href="temp_page.html" class="btn btn-success btn-lg">Go to One Page</a>
+
+<body class="custom-cursor">
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+    <div class="preloader">
+        <div class="preloader__image"></div>
+    </div>
+    <div class="page-wrapper">
+        <header class="main-header">
+            <div class="main-header__top">
+                <div class="main-header__top-inner">
+                    <div class="main-header__top-left">
+                        <ul class="list-unstyled main-header__contact-list">
+                            <li>
+                                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="text">
+                                    <p>Vashi, Navi Mumbai 400703</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon"><i class="fas fa-envelope"></i></div>
+                                <div class="text">
+                                    <p><a href="sales@progressivegroup.in">sales@progressivegroup.in</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon"><i class="fas fa-phone"></i></div>
+                                <div class="text">
+                                    <p><a href="tel:+9167770114">+9167770114</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="main-header__top-right">
+                        <div class="main-header__top-time">
+                            <p>Mon - Sun: 10 am - 7 pm</p>
+                        </div>
+                        <div class="main-header__social">
+                            <a href=""><i class="fab fa-facebook"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-menu">
+                <div class="main-menu__wrapper">
+                    <div class="main-menu__wrapper-inner">
+                        <div class="main-menu__left">
+                            <div class="main-menu__logo">
+                                <a href="">
+                                    <img src="assets/images/icon/Progressive-logo-1.png.webp" 
+                                         alt="" 
+                                         height="30" 
+                                         class="logo-img d-none d-lg-block">
+                                    <img src="assets/images/icon/Progressive-logo-1.png.webp" 
+                                         alt="" 
+                                         height="20" 
+                                         class="logo-img2 d-block d-lg-none">
+                                </a>
+                            </div>
+                        </div>
+<!-- <style>
+    .logo-img {
+    position: relative !important;
+    top: ; 
+}
+
+</style>                         -->
+                        <div class="main-menu__main-menu-box"><a href="#" class="mobile-nav__toggler"><i
+                                    class="fa fa-bars"></i></a>
+                            <ul class="main-menu__list one-page-scroll-menu">
+                                <li class="scrollToLink"><a href="#about">Overview</a></li>
+                                <li class="scrollToLink"><a href="#amenities">Amenities</a></li>
+                                <li class="scrollToLink"><a href="#plans">Plans</a></li>
+                                <li class="scrollToLink"><a href="#gallery">Gallery</a></li>
+                                <li class="scrollToLink"><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="main-menu__right">
+                            <div class="main-menu__search-btn-box">
+                                <div class="main-menu__btn-box"><a href="javascript:void(0);"
+                                        class="thm-btn main-menu__btn get-info" data-label="Unlock Exclusive Offers"
+                                        data-cta="Schedule Visit">Schedule a Visit</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div>
+        </div>
+        
+        <style>
+            /* Make the image container full width and height */
+            .image-container {
+                width: 100%;
+                /* height: 100vh;  */
+                /* Adjust height as needed */
+                overflow: hidden;
+                position: relative;
+                margin: 20px auto;
+            }
+    
+            /* Ensure the image covers the container while maintaining aspect ratio */
+            .image-container img {
+                width: 100%;
+                /* height: 130%; */
+                object-fit: contain; /* Cover ensures full container fill */
+            }
+            @media (max-width: 768px) {
+            .image-container img {
+                content: url('assets/images/resources/one_mobile_hero2.png'); /* Mobile-specific image */
+                object-fit: cover;
+            }
+        }
+        </style>
+        <div class="container-fluid p-0">
+    
+        <div class="image-container">
+            <img src="assets/images/resources/One2.jpg" class="img-fluid rounded" alt="Responsive Image">
+        </div>
     </div>
 
-    <!-- Bootstrap JgssgddgsgS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <section id="about" class="about-one" 
+  style="background: url('https://progressivegroup.in/ppc/wp-content/uploads/2021/09/Progressive-Elevation-png.png') repeat center center;">
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-6">
+                  <div class="about-one__left wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
+                    <!-- <div class="about-one__big-text">Apartments</div> -->
+                    <div class="about-one__img-box">
+                      <div class="about-one__img-one">
+                        <img src="assets/images/apartment/one-380x432-1.webp" alt="" style="max-width: 450px;">
+                      </div>
+                      <!-- <div class="about-one__img-two" style="top: 400px;">
+                        <img src="assets/images/resources/one-map.jpg.webp" alt="" style="max-width: 400px;">
+                      </div> -->
+                      <div class="about-one__shape-1 float-bob-y"></div>
+                      <div class="about-one__shape-2">
+                        <img src="assets/images/shapes/about-one-shape-2.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="about-one__right">
+                    <div class="section-title text-left">
+                      <span class="section-title__tagline">project overview</span>
+                      <h2 class="section-title__title">PROGRESSIVE ONE
+                        PROJECT AT A GLANCE</h2>
+                    </div>
+                    <p class="about-one__text mb-2 text-white">
+                      Welcome to <b>Progressive Group presents PROGRESSIVE ONE – A true reflection of excellence, where luxury and exclusivity come together in perfect harmony.
+
+ 
+
+                        Own exclusive 4.5 BHK Apartments in a Brownfield Project located in the prime area of Vashi. Each apartment is crafted with meticulous attention to detail, offering spacious interiors, high ceilings, and breathtaking views overlooking 25 acres of open space.
+                        
+                         
+                        
+                        With Progressive One, experience unrivaled privacy with one residence per floor, designed to provide the perfect blend of elegance, functionality, and serene living.
+                        
+                         
+                        
+                        Welcome to Progressive One!
+                    </p>
+                    
+                    <a href="javascript:void(0);" class="thm-btn about-one__btn mt-2 get-info" data-label="Download Brochure" data-cta="Get Details">
+                      More Details
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          <section class="counter-one mt-5">
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-12">
+                  <div class="counter-one__inner d-none">
+                    <ul class="list-unstyled counter-one__list">
+                      <li class="counter-one__single wow fadeInLeft" data-wow-delay="100ms">
+                        <div class="counter-one__icon"><span class="icon-apartments"></span></div>
+                        <div class="counter-one__content-box count-box">
+                          <h3 class="count-text" data-stop="1" data-speed="1500">00</h3>
+                          <p class="counter-one__text">Acre</p>
+                        </div>
+                      </li>
+                      <li class="counter-one__single wow fadeInLeft" data-wow-delay="200ms">
+                        <div class="counter-one__icon"><span class="icon-parking"></span></div>
+                        <div class="counter-one__content-box count-box">
+                          <h3 class="count-text" data-stop="300" data-speed="1500">00</h3>
+                          <p class="counter-one__text">Parkings</p>
+                        </div>
+                      </li>
+                      <li class="counter-one__single wow fadeInLeft" data-wow-delay="300ms">
+                        <div class="counter-one__icon"><span class="icon-hotel-bed"></span></div>
+                        <div class="counter-one__content-box count-box">
+                          <h3 class="count-text" data-stop="150" data-speed="1500">00</h3>
+                          <p class="counter-one__text">Apartments</p>
+                        </div>
+                      </li>
+                      <li class="counter-one__single wow fadeInLeft" data-wow-delay="400ms">
+                        <div class="counter-one__icon"><span class="icon-size"></span></div>
+                        <div class="counter-one__content-box count-box">
+                          <h3 class="count-text" data-stop="25" data-speed="1500">00</h3>
+                          <p class="counter-one__text">Amenities</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- <div class="mt-4">
+                    <div style="background: url('https://progressivegroup.in/ppc/wp-content/uploads/2021/09/Progressive-Elevation-png.png') repeat center center;">
+                      <div class="thm-owl__carousel owl-theme owl-carousel"
+                        data-owl-options='{"items": 8,"margin": 0,"smartSpeed": 700,"loop":true,"autoplay": 6000,"nav":false,"dots":false,"responsive":{"0":{"items":3},"768":{"items":4},"992":{"items": 8},"1200":{"items": 8}}}'>
+                        <div class="item text-center">
+                          <img src="assets/images/icon/gym-01.png" class="shadow-sm rounded-circle mx-auto" style="width: 50px;">
+                          <small class="d-block mt-1" style="font-size: 12px; line-height: 1.2; color: white;">Fitness Gym</small>
+                        </div>
+                        <div class="item text-center">
+                          <img src="assets/images/icon/jogging-track-01.png" class="shadow-sm rounded-circle mx-auto" style="width: 50px;">
+                          <small class="d-block mt-1" style="font-size: 12px; line-height: 1.2; color: white;">Jogging Track</small>
+                        </div>
+                        <div class="item text-center">
+                          <img src="assets/images/icon/landscape-grden-01.png" class="shadow-sm rounded-circle mx-auto" style="width: 50px;">
+                          <small class="d-block mt-1" style="font-size: 12px; line-height: 1.2; color: white;">Landscape Garden</small>
+                        </div>
+                        <div class="item text-center">
+                          <img src="assets/images/icon/sitting-under-tree-01.png" class="shadow-sm rounded-circle mx-auto" style="width: 50px;">
+                          <small class="d-block mt-1" style="font-size: 12px; line-height: 1.2; color: white;">Green Spaces</small>
+                        </div>
+                        <div class="item text-center">
+                          <img src="assets/images/icon/accupressure-path-01.png" class="shadow-sm rounded-circle mx-auto" style="width: 50px;">
+                          <small class="d-block mt-1" style="font-size: 12px; line-height: 1.2; color: white;">Reflexology Pathway</small>
+                        </div>
+                        <div class="item text-center">
+                          <img src="assets/images/icon/children-play-area-01.png" class="shadow-sm rounded-circle mx-auto" style="width: 50px;">
+                          <small class="d-block mt-1" style="font-size: 12px; line-height: 1.2; color: white;">Children's Area</small>
+                        </div>
+                        <div class="item text-center">
+                          <img src="assets/images/icon/recreational-area-01.png" class="shadow-sm rounded-circle mx-auto" style="width: 50px;">
+                          <small class="d-block mt-1" style="font-size: 12px; line-height: 1.2; color: white;">Indoor Games Area</small>
+                        </div>
+                        <div class="item text-center">
+                          <img src="assets/images/icon/indoor-sitting-01.png" class="shadow-sm rounded-circle mx-auto" style="width: 50px;">
+                          <small class="d-block mt-1" style="font-size: 12px; line-height: 1.2; color: white;">Recreational Area</small>
+                        </div>
+                        <div class="item text-center">
+                          <img src="assets/images/icon/senior-sitting-area-01.png" class="shadow-sm rounded-circle mx-auto" style="width: 50px;">
+                          <small class="d-block mt-1" style="font-size: 12px; line-height: 1.2; color: white;">Senior's Area</small>
+                        </div>
+                        <div class="item text-center">
+                          <img src="assets/images/icon/toodler-area.png" class="shadow-sm rounded-circle mx-auto" style="width: 50px;">
+                          <small class="d-block mt-1" style="font-size: 12px; line-height: 1.2; color: white;">Kids Play Area</small>
+                        </div>
+                        <div class="item text-center">
+                          <img src="assets/images/icon/view-01.png" class="shadow-sm rounded-circle mx-auto" style="width: 50px;">
+                          <small class="d-block mt-1" style="font-size: 12px; line-height: 1.2; color: white;">Infinite Views</small>
+                        </div>
+                        <div class="item text-center">
+                          <img src="assets/images/icon/wifi-01.png" class="shadow-sm rounded-circle mx-auto" style="width: 50px;">
+                          <small class="d-block mt-1" style="font-size: 12px; color: white;">Wifi & Workstation</small>
+                      
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </section>
+          
+        <section id="amenities" class="feature-one">
+            <div class="feature-one__bg-box">
+                <div class="feature-one__bg"
+                    style="background-image: url(assets/images/backgrounds/feature-one-bg.jpg);"></div>
+            </div>
+            <div class="feature-one__shape-1 float-bob-x"><img src="assets/images/shapes/feature-one-shape-1.png"
+                    alt=""></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5">
+                        <div class="feature-one__left">
+                            <div class="section-title text-left"><span class="section-title__tagline">Main
+                                    features</span>
+                                <h2 class="section-title__title">Elevate Your Lifestyle at Progressive One</h2>
+                            </div>
+                            <p class="text-white feature-one__text">
+                                Discover the ultimate fusion of technology and luxury, with a smart home that brings unmatched elegance to your life.
+                            </p>
+                            <div class="feature-one__video-link"><a href="https://www.youtube.com/watch?v=NpEaa2P7qZI"
+                                    class="video-popup">
+                                    <div class="feature-one__video-icon"><span class="fa fa-play"></span><i
+                                            class="ripple"></i></div>
+                                </a></div>
+                            <div class="feature-one__counter-box">
+                                <!-- <ul class="feature-one__counter-list list-unstyled">
+                                    <li>
+                                        <div class="feature-one__counter-content-box">
+                                            <div class="feature-one__counter-count-box count-box">
+                                                <h3 class="count-text" data-stop="13" data-speed="1500">00</h3><span
+                                                    class="feature-one__counter-plus">G+</span>
+                                            </div>
+                                            <p class="feature-one__counter-text">Total Highrise Floors</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="feature-one__counter-content-box">
+                                            <div class="feature-one__counter-count-box count-box">
+                                                <h3 class="count-text" data-stop="25" data-speed="1500">00</h3><span
+                                                    class="feature-one__counter-plus">+</span>
+                                            </div>
+                                            <p class="feature-one__counter-text">Lifestyle Amenities</p>
+                                        </div>
+                                    </li>
+                                </ul> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-7">
+                        <div class="feature-one__right">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                                    <div class="feature-one__single">
+                                        <div class="feature-one__single-inner">
+                                            <!-- new -->
+                                            <div class="feature-one__icon"><span class="icon-condominium"></span></div>
+                                            <h3 class="feature-one__title"><a href="javascript:void(0);">Prime Plot</a></h3>
+                                            <p class="feature-one__text">
+                                                Introducing Progressive One, an exclusive collection of 4.5 BHK apartments in a prestigious Brownfield Project at the heart of Vashi.
+                                            </p>
+                                            <div class="feature-one__btn"><a href="javascript:void(0);" class="get-info"
+                                                    data-label="Download Brochure" data-cta="Get Details"> <i
+                                                        class="fa fa-arrow-right"></i>Know More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                                    <div class="feature-one__single">
+                                        <div class="feature-one__single-inner">
+                                            <div class="feature-one__icon"><span class="icon-sustainable"></span></div>
+                                            <h3 class="feature-one__title"><a href="javascript:void(0);">Elevated Living
+                                            </a></h3>
+                                            <p class="feature-one__text"> A seamless blend of space and serenity, where modern luxury meets urban vibrancy in a home built for the extraordinary.</p>
+                                            <div class="feature-one__btn"><a href="javascript:void(0);" class="get-info"
+                                                    data-label="Download Brochure" data-cta="Get Details"> <i
+                                                        class="fa fa-arrow-right"></i>Know More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                                    <div class="feature-one__single">
+                                        <div class="feature-one__single-inner">
+                                            <div class="feature-one__icon"><span class="icon-world"></span></div>
+                                            <h3 class="feature-one__title"><a href="javascript:void(0);">Unparalleled Privacy
+                                            </a></h3>
+                                            <p class="feature-one__text">
+                                                One floor, one residence—offering unmatched exclusivity with breathtaking views overlooking 25 acres of open space.
+ 
+                                            </p>
+                                            <div class="feature-one__btn"><a href="javascript:void(0);" class="get-info"
+                                                    data-label="Download Brochure" data-cta="Get Details"> <i
+                                                        class="fa fa-arrow-right"></i>Know More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                                    <div class="feature-one__single">
+                                        <div class="feature-one__single-inner">
+                                            <div class="feature-one__icon"><span class="icon-living-room"></span></div>
+                                            <h3 class="feature-one__title"><a href="javascript:void(0);">Luxury Redefined
+
+                                                    </a></h3>
+                                            <p class="feature-one__text">
+                                                Wake up to grandeur in a thoughtfully designed home with expansive interiors, grand ceiling heights, and 10-feet clear height, elevating your living experience.
+                                            </p>
+                                            <div class="feature-one__btn"><a href="javascript:void(0);" class="get-info"
+                                                    data-label="Download Brochure" data-cta="Get Details"> <i
+                                                        class="fa fa-arrow-right"></i>Know More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="gallery-one">
+                <div class="gallery-one__container">
+                    <div class="gallery-one__carousel thm-owl__carousel owl-theme owl-carousel"
+                        data-owl-options='{"items": 5,"margin": 0,"smartSpeed": 700,"loop":true,"autoplay": 6000,"nav":false,"dots":false,"navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],"responsive":{"0":{"items":1},"768":{"items":3},"992":{"items": 4},"1200":{"items": 5}}}'>
+                        <div class="item">
+                            <div class="gallery-one__single img-popup" href="assets/images/gallery/podium.jpg"
+                                data-fancybox="amenities-gall">
+                                <div class="gallery-one__img"><img src="assets/images/gallery/podium-sm.jpg" alt="">
+                                    <div class="gallery-one__icon"><a class="" href="javascript:void(0);"><span
+                                                class="fa fa-plus"></span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="gallery-one__single img-popup" href="assets/images/gallery/alexa.jpg"
+                                data-fancybox="amenities-gall">
+                                <div class="gallery-one__img"><img src="assets/images/gallery/alexa-sm.jpg" alt="">
+                                    <div class="gallery-one__icon"><a class="" href="javascript:void(0);"><span
+                                                class="fa fa-plus"></span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="gallery-one__single img-popup" href="assets/images/gallery/gym.jpg"
+                                data-fancybox="amenities-gall">
+                                <div class="gallery-one__img"><img src="assets/images/gallery/gym-sm.jpg" alt="">
+                                    <div class="gallery-one__icon"><a class="" href="javascript:void(0);"><span
+                                                class="fa fa-plus"></span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="gallery-one__single img-popup" href="assets/images/gallery/smart-lock.jpg"
+                                data-fancybox="amenities-gall">
+                                <div class="gallery-one__img"><img src="assets/images/gallery/smart-lock-sm.jpg" alt="">
+                                    <div class="gallery-one__icon"><a class="" href="javascript:void(0);"><span
+                                                class="fa fa-plus"></span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="gallery-one__single img-popup" href="assets/images/gallery/smart-door.jpg"
+                                data-fancybox="amenities-gall">
+                                <div class="gallery-one__img"><img src="assets/images/gallery/smart-door-sm.jpg" alt="">
+                                    <div class="gallery-one__icon"><a class="" href="javascript:void(0);"><span
+                                                class="fa fa-plus"></span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <section id="plans" class="floor-plan">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="section-title__tagline">Project Configuration</span>
+                    <h2 class="section-title__title">Apartment Plans</h2>
+                    <p class="text-white floor-plan__text">
+                        Discover Progressive One, strategically located in the prime area of Vashi. Experience luxurious living in spacious homes seamlessly integrated with state-of-the-art technology, including voice-controlled automation in every apartment. Enjoy unparalleled security with advanced smart locks and video doorphones, all while taking in breathtaking views framed by sleek, invisible grills designed for both safety and style.
+                    </p>
+                </div>
+                <div class="floor-plan__main-tab-box tabs-box">
+                    <ul class="tab-buttons clearfix list-unstyled">
+                        <li data-tab="#typical-plan" class="tab-btn active-btn"><span>Typical Floor Plan</span></li>
+                        <!-- <li data-tab="#811-plan" class="tab-btn"><span>Ground floor plan</span></li> -->
+                        <!-- <li data-tab="#13-plan" class="tab-btn"><span>13 Floor Plan</span></li> -->
+                    </ul>
+                    <div class="tabs-content">
+                        <div class="tab active-tab" id="typical-plan">
+                            <div class="floor-plan__tab-content-inner">
+                                <div class="floor-plan__tab-content-left">
+                                    <!-- Left content here (if any) -->
+                                </div>
+                                <div class="floor-plan__tab-content-righ">
+                                    <div class="gallery-two__single img-popup" href="assets/images/resources/one-plan2-01-2048x1481.jpg (1).webp" data-fancybox="configs">
+                                        <div class="gallery-two__img">
+                                            <img src="assets/images/resources/one-plan2-01-2048x1481.jpg (1).webp" alt="">
+                                            <div class="gallery-two__icon">
+                                                <a href="javascript:void(0);"><span class="fa fa-plus"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="tab" id="811-plan">
+                            <div class="floor-plan__tab-content-inner">
+                                <div class="floor-plan__tab-content-left">
+                                    <!-- Left content here (if any) -->
+                                </div>
+                                <div class="floor-plan__tab-content-righ">
+                                    <div class="gallery-two__single img-popup" href="" data-fancybox="configs">
+                                        <div class="gallery-two__img">
+                                            <img src="" alt="">
+                                            <div class="gallery-two__icon">
+                                                <a href="javascript:void(0);"><span class="fa fa-plus"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                        <!-- Uncomment below for 13-plan if needed
+                        <div class="tab" id="13-plan">
+                            <div class="floor-plan__tab-content-inner">
+                                <div class="floor-plan__tab-content-left">
+                                    Left content here (if any)
+                                </div>
+                                <div class="floor-plan__tab-content-righ">
+                                    <div class="gallery-two__single img-popup"
+                                        href="assets/images/resources/13-plan-comp.jpg" data-fancybox="configs">
+                                        <div class="gallery-two__img">
+                                            <img src="assets/images/resources/13-plan-comp.jpg" alt="">
+                                            <div class="gallery-two__icon">
+                                                <a href="javascript:void(0);"><span class="fa fa-plus"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </section>
+<style>
+    
+</style>        
+        <!-- <section id="gallery" class="apartments-one">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="section-title__tagline">Apartments & Complex</span>
+                    <h2 class="section-title__title">Choose Your Apartment</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="apartments-one__single">
+                            <div class="apartments-one__img">
+                                <img src="assets/images/resources/one-plan1-2048x1481.jpg.webp" 
+                                     alt="" style="width: 100%; height: auto;"> 
+                                <div class="apartments-one__title-box">
+                                    <h3 class="apartments-one__title">
+                                        <a href="javascript:void(0);">Smart 1BHK</a>
+                                    </h3>
+                                </div>
+                                <div class="apartments-one__hover">
+                                    <h3 class="apartments-one__hover-title">
+                                        <a href="javascript:void(0);">Smart 1BHK</a>
+                                    </h3>
+                                    <p class="apartments-one__hover-text">Starting from 400 sq. ft.</p>
+                                    <div class="apartments-one__arrow">
+                                        <a href="javascript:void(0);" class="get-info"
+                                           data-label="Unlock Exclusive Offers" data-cta="Get Offer">
+                                            <span class="icon-right-arrow"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="apartments-one__single">
+                            <div class="apartments-one__img">
+                                <img src="assets/images/resources/one-plan2-01-2048x1481.jpg.webp" 
+                                     alt="" style="width: 100%; height: auto;">
+                                <div class="apartments-one__title-box">
+                                    <h3 class="apartments-one__title">
+                                        <a href="javascript:void(0);">Spacious 2BHK</a>
+                                    </h3>
+                                </div>
+                                <div class="apartments-one__hover">
+                                    <h3 class="apartments-one__hover-title">
+                                        <a href="javascript:void(0);">Spacious 2BHK</a>
+                                    </h3>
+                                    <p class="apartments-one__hover-text">Starting from 600 sq. ft.</p>
+                                    <div class="apartments-one__arrow">
+                                        <a href="javascript:void(0);" class="get-info"
+                                           data-label="Unlock Exclusive Offers" data-cta="Get Offer">
+                                            <span class="icon-right-arrow"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+<style>
+    .apartments-one__img::before {
+    content: none !important;
+}
+
+.apartments-one__img img {
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+.apartments-one__img {
+    background: none !important;
+}
+
+</style>        
+        
+                    <!-- <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="apartments-one__single">
+                            <div class="apartments-one__img"><img src="assets/images/apartment/4bhk-bal.jpg" alt="">
+                                <div class="apartments-one__title-box">
+                                    <h3 class="apartments-one__title"><a href="javascript:void(0);">Opulent 4BHK</a>
+                                    </h3>
+                                </div>
+                                <div class="apartments-one__hover">
+                                    <h3 class="apartments-one__hover-title"><a href="javascript:void(0);">Opulent
+                                            4BHK</a></h3>
+                                    <p class="apartments-one__hover-text">Starting from 1563 sq. ft.</p>
+                                    <div class="apartments-one__arrow"><a href="javascript:void(0);" class="get-info"
+                                            data-label="Unlock Exclusive Offers" data-cta="Get Offer"><span
+                                                class="icon-right-arrow"></span> </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                <!-- </div>
+            </div>
+        </section> -->
+        <section class="neighborhoods">
+            <div class="neighborhoods-bg"></div>
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="section-title__tagline">Nearby areas</span>
+                    <h2 class="section-title__title">Neighborhoods</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-5 col-lg-5">
+                        <div class="neighborhoods__left">
+                            <div class="neighborhoods__faq">
+                                <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
+                                    <div class="accrodion">
+                                        <div class="accrodion-title">
+                                            <h4>Connectivity</h4>
+                                        </div>
+                                        <div class="accrodion-content">
+                                            <div class="inner">
+                                                <table class="info-table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Mumbai Trans-harbour Link</td>
+                                                            <td>13.7 km</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Navi Mumbai Airport</td>
+                                                            <td>24.3 km</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Waterways & Bridges</td>
+                                                            <td>2.2 km</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accrodion">
+                                        <div class="accrodion-title">
+                                            <h4>Hotspots</h4>
+                                        </div>
+                                        <div class="accrodion-content">
+                                            <div class="inner">
+                                                <table class="info-table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Fortis Hospital</td>
+                                                            <td>5.6 km</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>MGM Hospital</td>
+                                                            <td>7.2 km</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>APMC Market</td>
+                                                            <td>3.4 km</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Inorbit Mall</td>
+                                                            <td>6.1 km</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Satra Plaza</td>
+                                                            <td>4.8 km</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Fr. Agnel School</td>
+                                                            <td>2.5 km</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Sacred Heart High School</td>
+                                                            <td>3.0 km</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-12">
+                        <div class="map-container">
+                            <img src="assets/images/resources/one-map.jpg.webp" alt="Neighborhood Map" class="img-fluid">
+                        </div>
+                    </div>
+            </div>
+        </section>
+        
+        <style>
+
+/* .main-slider .container {
+    position: relative !important;
+    padding-top: 800px !important;
+    padding-bottom: 100px !important;
+    z-index: 30 !important;
+} */
+
+
+/* Container for the Map */
+/* Container for the Map */
+.map-container {
+    position: relative;
+    width: 100%;
+    min-height: 500px; /* Increased minimum height */
+    height: 650px; /* Fixed height for larger screens */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Set a white background to avoid black portions */
+}
+
+/* Make the Image Fully Responsive */
+.map-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; /* Removes any extra space below the image */
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        min-height: 600px; /* Increased size for mobile */
+        height: 600px; /* Maintain a fixed height */
+    }
+}
+
+/* Accordion Container */
+.accrodion-grp {
+    margin-top: 20px !important;
+}
+
+/* Accordion Title */
+.accrodion-title {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 15px 20px !important;
+    background-color: #f9f9f9 !important;
+    border: 1px solid #ddd !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s !important;
+    position: relative !important;
+    margin-bottom: 5px !important;
+}
+
+/* Accordion Title Text */
+.accrodion-title h4 {
+    margin: 0 !important;
+    font-size: 18px !important;
+    color: #333 !important;
+}
+
+/* Dropdown Arrow */
+.accrodion-title::after {
+    content: "\25BC" !important;
+    font-size: 20px !important;
+    color: #666 !important;
+    transition: transform 0.3s !important;
+    position: absolute !important;
+    right: 20px !important;
+}
+
+/* Accordion Content */
+.accrodion-content {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: max-height 0.5s ease !important;
+    padding-left: 20px !important;
+    border-left: 2px solid #ddd !important;
+    background-color: #fff !important;
+    box-sizing: border-box !important;
+}
+
+/* Accordion Active State */
+.accrodion.active .accrodion-content {
+    max-height: none !important; /* Remove fixed height to allow dynamic resizing */
+    padding: 15px 20px !important;
+    overflow: visible !important; /* Ensure all content is shown */
+}
+
+/* Rotate Arrow When Active */
+.accrodion.active .accrodion-title::after {
+    transform: rotate(180deg) !important;
+}
+
+/* Table Styles */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.info-table td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    font-size: 16px;
+}
+
+.info-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.info-table td:last-child {
+    text-align: right;
+    font-weight: bold;
+    color: #555;
+}
+
+
+        </style>
+        <section id="contact" class="contact-one">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="contact-one__left">
+                            <div class="section-title text-left"><span class="section-title__tagline">contact now</span>
+                                <h2 class="section-title__title">Get in touch with us</h2>
+                            </div>
+                            <!-- <div class="contact-one__person">
+                                <div class="contact-one__person-img"><img src="assets/images/resources/maha-rera.jpg"
+                                        alt=""></div>
+                                <div class="contact-one__person-content">
+                                    <h3 class="contact-one__person-name">P52000066473</h3>
+                                    <p class="contact-one__person-sub-title">Reg. No.</p>
+                                </div>
+                            </div> -->
+                            <p class="contact-one__text-1">Whether you're a resident, investor, or channel partner, your voice matters to us. Share your thoughts, and together, let's shape the future of Progressive One into a landmark of luxury and innovation.!</p>
+                            <ul class="list-unstyled contact-one__list">
+                                <li>
+                                    <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                                    <div class="content">
+                                        <p class="white-clr">Have any questions to ask?</p>
+                                        <h4> <span class="d-block">24x7</span> <br>
+                                            <p class="mb-2"><a href="tel:+91 98765 43210">+9167770104</a></p>
+                                        </h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                                    <div class="content">
+                                        <p class="white-clr">Write to us for any queries</p>
+                                        <h4><a href="mailto:info@invictaeclat.com">sales@progressivegroup.in</a></h4>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="contact-one__right">
+                            <div class="row">
+                                <div class="contact-one__form-box">
+                                    <form action="api/service/contact-us" method="post"
+                                        class="contact-one__form contact-one-validated theme-form">
+                                        <div class="row">
+                                            <div class="col-xl-12 col-lg-12 col-md-12">
+                                                <div class="contact-one__input-box"><input type="text"
+                                                        placeholder="Your Name" name="name"
+                                                        data-msg="Please enter your name" data-rule="required">
+                                                    <div class="validate small text-danger"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                                <div class="contact-one__input-box"><input type="number"
+                                                        placeholder="Phone Number" name="phone"
+                                                        data-msg="Please enter a valid Phone Number"
+                                                        data-rule="minlen:10">
+                                                    <div class="validate small text-danger"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                                <div class="contact-one__input-box"><input type="email"
+                                                        placeholder="Email Address" name="email"
+                                                        data-msg="Please enter a valid Email Address" data-rule="email">
+                                                    <div class="validate small text-danger"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <div class="contact-one__input-box text-message-box h-auto"><textarea
+                                                        name="mssg" placeholder="Your Message"
+                                                        data-msg="Please let us know how can we help you"
+                                                        data-rule="required"></textarea>
+                                                    <div class="validate small text-danger"></div>
+                                                </div>
+                                                <div class="contact-one__btn-box"><input type="hidden" name="sub"
+                                                        value="General Contact"><button type="submit"
+                                                        class="thm-btn contact-one__btn border-0">Send</button>
+                                                    <div class="response mt-2"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="site-footer">
+            <div class="site-footer__top">
+                <div class="site-footer__shape-1 float-bob-x">
+                    <img src="assets/images/shapes/site-footer-shape-1.png" alt="">
+                </div>
+                <div class="container">
+                    <div class="site-footer__top-inner">
+                        <div class="row">
+                            <!-- About Section with Social Icons and Maharera Info -->
+                            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                                <div class="footer-widget__column footer-widget__about">
+                                    <div class="footer-widget__about-text-box">
+                                        <p class="footer-widget__about-text">
+                                            <!-- <img src="assets/images/resources/gajora-logo-new.png" width="150"> -->
+                                        </p>
+                                    </div>
+                                    <div class="site-footer__social">
+                                        <a href=""><i class="fab fa-facebook"></i></a>
+                                        <a href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                    
+                                    <!-- New Section for QR Code, Maharera Number, and Logo -->
+                                    <div class="footer-widget__maharera">
+                                        <div class="maharera-content">
+                                            <!-- ONE_QR Image -->
+                                            <img src="assets/images/resources/ONE_QR.png" alt="QR Code" class="maharera-qr">
+                                            
+                                            <!-- Maharera Number -->
+                                            <p class="maharera-number">Maharera No. P51700054296</p>
+                                            
+                                            <!-- Maharera Logo -->
+                                            <img src="assets/images/resources/Maharera_logo.png" alt="Maharera Logo" class="maharera-logo">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        <style>
+          .footer-widget__maharera {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.maharera-content {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    gap: 10px;
+}
+
+.maharera-qr, .maharera-logo {
+    width: 80px; /* Increased size for better visibility */
+    height: auto;
+}
+
+.maharera-number {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+        </style>
+                            <!-- Contact Section -->
+                            <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                                <div class="footer-widget__column footer-widget__Explore">
+                                    <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">Contact</h3>
+                                    </div>
+                                    <ul class="footer-widget__Contact-list list-unstyled">
+                                        <li>
+                                            <div class="icon"><span class="fas fa-phone-alt"></span></div>
+                                            <div class="text">
+                                                <p><a href="tel:+9167770114">+9167770114</a></p>
+                                                <p><a href="tel:+9167770104">+9167770104</a></p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+        
+                            <!-- Find Section -->
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                                <div class="footer-widget__column footer-widget__find">
+                                    <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">Find</h3>
+                                    </div>
+                                    <ul class="footer-widget__Explore-list list-unstyled">
+                                        <li>
+                                            <a href="https://maps.app.goo.gl/arPXnPP1EejkwMTX8" target="_blank">
+                                                Progressive One, Sector 4, Vashi, Navi Mumbai,<br />Maharashtra 410206
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+        
+                            <!-- Visit Section -->
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                                <div class="footer-widget__column footer-widget__Contact">
+                                    <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">Visit</h3>
+                                    </div>
+                                    <ul class="footer-widget__Contact-list list-unstyled">
+                                        <li>
+                                            <div class="icon"><span class="fas fa-clock"></span></div>
+                                            <div class="text">
+                                                <p>Mon - Sun: 10 am - 7 pm</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon"><span class="fas fa-envelope"></span></div>
+                                            <div class="text">
+                                                <p><a href="mailto:sales@progressivegroup.in">sales@progressivegroup.in</a></p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Footer Bottom -->
+            <div class="site-footer__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="site-footer__bottom-inner">
+                                <p class="site-footer__bottom-text">
+                                    &copy; All Rights Reserved.
+                                    <span class="d-block float-md-end small">
+                                        Powered by <a href="https://tech2edge.co/" class="text-white" target="_blank">Tech2Edge</a>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+    </div>
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content"><span class="mobile-nav__close mobile-nav__toggler"><i
+                    class="fa fa-times"></i></span>
+            <div class="logo-box"><a href="" class="p-2"
+                    aria-label=""><img src="assets/images/resources/Progressive-logo-1-300x46.png" width="122"
+                        alt="" /></a></div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li><i class="fa fa-envelope"></i><a href="mailto:sales@progressivegroup.in">sales@progressivegroup.in</a></li>
+                <li><i class="fa fa-phone-alt"></i><a href="tel:+9167773322">+9167773322</a></li>
+            </ul>
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social"><a href="" class="fab fa-facebook-square"></a><a href=""
+                        class="fab fa-instagram"></a></div>
+            </div>
+        </div>
+    </div>
+    <div id="fab">
+        <a href="javascript:void(0);" class="float" id="menu-share">
+            <img src="assets/images/icon/support-white.svg" width="40"
+                style="top: 10px; position:relative;">
+            </a>
+        <ul>
+            <li><a href="https://wa.me/+9167773322" class="bg-success" target="_blank"><i
+                        class="fab fa-whatsapp my-float"></i></a></li>
+            <li><a href="mailto:info@invictaeclat.com" class="bg-danger"><i class="fa fa-envelope my-float"></i></a>
+            </li>
+            <li><a href="tel:++9167773322" class="bg-primary"><i class="fa fa-phone my-float"></i></a></li>
+        </ul>
+    </div>
+    <div class="modal fade" id="priceModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="pricingModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 pb-0" style="background-color: var(--aports-primary);">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0" style="background-color: var(--aports-primary);">
+                <div class="contact-one__right">
+                    <div class="row">
+                        <div class="contact-one__form-box py-3 px-3">
+                            <p class="text-center mb-3">
+                                <img src="assets/images/resources/Progressive-logo-1-300x46.png" width="150">
+                            </p>
+                            <h3 class="text-center mb-3 axn-title">Unlock Exclusive Offers</h3>
+                            <p class="text-center mb-3 small text-white" style="line-height: 1.4;">
+                                Share your details now to seize the best deal and schedule your personalized visit.
+                                Your dream property awaits &#8211; let's make it yours!
+                            </p>
+                            <form action="api/service/contact-us" method="post"
+                                class="contact-one__form contact-one-validated theme-form">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                        <div class="contact-one__input-box">
+                                            <input type="text" placeholder="Your Name" name="name"
+                                                data-msg="Please enter your name" data-rule="required">
+                                            <div class="validate small text-danger"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                        <div class="contact-one__input-box">
+                                            <input type="number" placeholder="Phone Number" name="phone"
+                                                data-msg="Please enter a valid Phone Number" data-rule="minlen:10">
+                                            <div class="validate small text-danger"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                        <div class="contact-one__input-box">
+                                            <input type="email" placeholder="Email Address" name="email"
+                                                data-msg="Please enter a valid Email Address" data-rule="email">
+                                            <div class="validate small text-danger"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="contact-one__btn-box">
+                                            <input name="sub" type="hidden">
+                                            <input name="mssg" type="hidden">
+                                            <button type="submit" class="thm-btn contact-one__btn border-0 btn-axn">
+                                                Get Offer
+                                            </button>
+                                            <div class="response mt-2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins.min.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
+
 </html>
