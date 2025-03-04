@@ -2,8 +2,9 @@
 <html>
 
 <head>
-    <title>Progressive One</title>
-    <meta name="charset" content="utf-8">
+    <title>Progressive's One</title>
+    <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="assets/fonts/aports-icons/style.css">
     <link rel="stylesheet" type="text/css" href="assets/fonts/laginchy-quirky/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.min.css">
+    <link rel="shortcut icon" href="https://progressivegroup.in/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body class="custom-cursor">
@@ -46,7 +48,7 @@
                             <li>
                                 <div class="icon"><i class="fas fa-phone"></i></div>
                                 <div class="text">
-                                    <p><a href="tel:+9167770114">+9167770114</a></p>
+                                    <p><a href="tel:9167770114">91677 70104</a></p>
                                 </div>
                             </li>
                         </ul>
@@ -92,7 +94,7 @@
                                 <li class="scrollToLink"><a href="#about">Overview</a></li>
                                 <li class="scrollToLink"><a href="#amenities">Amenities</a></li>
                                 <li class="scrollToLink"><a href="#plans">Plans</a></li>
-                                <li class="scrollToLink"><a href="#gallery">Gallery</a></li>
+                                <!-- <li class="scrollToLink"><a href="#gallery">Gallery</a></li> -->
                                 <li class="scrollToLink"><a href="#contact">Contact</a></li>
                             </ul>
                         </div>
@@ -112,33 +114,51 @@
         </div>
         
         <style>
-            /* Make the image container full width and height */
-            .image-container {
-                width: 100%;
-                /* height: 100vh;  */
-                /* Adjust height as needed */
-                overflow: hidden;
-                position: relative;
-                margin: 20px auto;
-            }
-    
-            /* Ensure the image covers the container while maintaining aspect ratio */
-            .image-container img {
-                width: 100%;
-                /* height: 130%; */
-                object-fit: contain; /* Cover ensures full container fill */
-            }
-            @media (max-width: 768px) {
-            .image-container img {
-                content: url('assets/images/resources/one_mobile_hero2.png'); /* Mobile-specific image */
-                object-fit: cover;
-            }
-        }
+            /* Default styling for all screen sizes */
+.image-container {
+    width: 100%;
+    overflow: hidden; /* Ensures no unwanted overflow */
+    position: relative;
+    margin: 0 auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    object-fit: cover;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .image-container {
+        height: auto; /* Adjust height dynamically */
+    }
+
+    .image-container img {
+        content: url('assets/images/resources/one_mobile_hero3.jpg'); /* Mobile-specific image */
+        width: 100%;
+        height: auto; /* Ensures image resizes properly */
+        object-fit: cover;
+    }
+
+    .main-header {
+        background: black;
+        position: fixed; /* Fix header on mobile */
+        left: 0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        transition: 0.5s;
+        z-index: 999;
+    }
+}
+
         </style>
         <div class="container-fluid p-0">
     
         <div class="image-container">
-            <img src="assets/images/resources/One2.jpg" class="img-fluid rounded" alt="Responsive Image">
+            <img src="assets/images/resources/One_hero_rev_new.jpg" class="img-fluid rounded" alt="Responsive Image">
         </div>
     </div>
 
@@ -167,23 +187,23 @@
                   <div class="about-one__right">
                     <div class="section-title text-left">
                       <span class="section-title__tagline">project overview</span>
-                      <h2 class="section-title__title">PROGRESSIVE ONE
-                        PROJECT AT A GLANCE</h2>
+                      <h2 class="section-title__title">Progressive's One
+                        </h2>
                     </div>
                     <p class="about-one__text mb-2 text-white">
-                      Welcome to <b>Progressive Group presents PROGRESSIVE ONE – A true reflection of excellence, where luxury and exclusivity come together in perfect harmony.
+                        Welcome to Progressive Group presents Progressive's One - A true reflection of excellence, where luxury and exclusivity come together in perfect harmony.
 
  
 
-                        Own exclusive 4.5 BHK Apartments in a Brownfield Project located in the prime area of Vashi. Each apartment is crafted with meticulous attention to detail, offering spacious interiors, high ceilings, and breathtaking views overlooking 25 acres of open space.
+                        Own exclusive 4.5 BHK apartments in a brownfield project located in the prime area of vashi. Each apartment is crafted with meticulous attention to detail, offering spacious interiors, high ceilings, and breathtaking views overlooking 25 acres of open space.
                         
                          
                         
-                        With Progressive One, experience unrivaled privacy with one residence per floor, designed to provide the perfect blend of elegance, functionality, and serene living.
+                        With Progressive's One, experience unrivaled privacy with one residence per floor, designed to provide the perfect blend of elegance, functionality, and serene living.
                         
                          
                         
-                        Welcome to Progressive One!
+                        Welcome to Progressive's One!
                     </p>
                     
                     <a href="javascript:void(0);" class="thm-btn about-one__btn mt-2 get-info" data-label="Download Brochure" data-cta="Get Details">
@@ -198,16 +218,16 @@
             <div class="container">
               <div class="row">
                 <div class="col-xl-12">
-                  <div class="counter-one__inner d-none">
+                  <!-- <div class="counter-one__inner d-none"> -->
                     <ul class="list-unstyled counter-one__list">
-                      <li class="counter-one__single wow fadeInLeft" data-wow-delay="100ms">
+                      <!-- <li class="counter-one__single wow fadeInLeft" data-wow-delay="100ms">
                         <div class="counter-one__icon"><span class="icon-apartments"></span></div>
                         <div class="counter-one__content-box count-box">
                           <h3 class="count-text" data-stop="1" data-speed="1500">00</h3>
                           <p class="counter-one__text">Acre</p>
                         </div>
-                      </li>
-                      <li class="counter-one__single wow fadeInLeft" data-wow-delay="200ms">
+                      </li> -->
+                      <!-- <li class="counter-one__single wow fadeInLeft" data-wow-delay="200ms">
                         <div class="counter-one__icon"><span class="icon-parking"></span></div>
                         <div class="counter-one__content-box count-box">
                           <h3 class="count-text" data-stop="300" data-speed="1500">00</h3>
@@ -227,9 +247,32 @@
                           <h3 class="count-text" data-stop="25" data-speed="1500">00</h3>
                           <p class="counter-one__text">Amenities</p>
                         </div>
-                      </li>
+                      </li> -->
                     </ul>
                   </div>
+                  <!-- <style>
+                    section {
+    scroll-margin-top: 80px; 
+}
+
+                  </style>
+                  <script>
+                    document.querySelectorAll('.scrollToLink a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 100,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+                  </script> -->
                   <!-- <div class="mt-4">
                     <div style="background: url('https://progressivegroup.in/ppc/wp-content/uploads/2021/09/Progressive-Elevation-png.png') repeat center center;">
                       <div class="thm-owl__carousel owl-theme owl-carousel"
@@ -289,23 +332,23 @@
             </div>
           </section>
           
-        <section id="amenities" class="feature-one">
+        <section id="amenities" class="feature-one" style="background: url('https://progressivegroup.in/ppc/wp-content/uploads/2021/09/Progressive-Elevation-png.png') repeat center center;">
             <div class="feature-one__bg-box">
                 <div class="feature-one__bg"
                     style="background-image: url(assets/images/backgrounds/feature-one-bg.jpg);"></div>
             </div>
-            <div class="feature-one__shape-1 float-bob-x"><img src="assets/images/shapes/feature-one-shape-1.png"
-                    alt=""></div>
+            <!-- <div class="feature-one__shape-1 float-bob-x"><img src="assets/images/shapes/feature-one-shape-1.png"
+                    alt=""></div> -->
             <div class="container">
                 <div class="row">
                     <div class="col-xl-5">
                         <div class="feature-one__left">
                             <div class="section-title text-left"><span class="section-title__tagline">Main
                                     features</span>
-                                <h2 class="section-title__title">Elevate Your Lifestyle at Progressive One</h2>
+                                <h2 class="section-title__title">Elevate Your Lifestyle at Progressive's One</h2>
                             </div>
                             <p class="text-white feature-one__text">
-                                Discover the ultimate fusion of technology and luxury, with a smart home that brings unmatched elegance to your life.
+                                Discover the ultimate fusion of technology and luxury, with a thoughtfully designed home that brings unmatched elegance to your life.
                             </p>
                             <div class="feature-one__video-link"><a href="https://www.youtube.com/watch?v=NpEaa2P7qZI"
                                     class="video-popup">
@@ -344,9 +387,9 @@
                                         <div class="feature-one__single-inner">
                                             <!-- new -->
                                             <div class="feature-one__icon"><span class="icon-condominium"></span></div>
-                                            <h3 class="feature-one__title"><a href="javascript:void(0);">Prime Plot</a></h3>
+                                            <h3 class="feature-one__title"><a href="javascript:void(0);">Prime Location</a></h3>
                                             <p class="feature-one__text">
-                                                Introducing Progressive One, an exclusive collection of 4.5 BHK apartments in a prestigious Brownfield Project at the heart of Vashi.
+                                                Introducing Progressive's one, a visionary development where innovation meets sophisticated living, offering an exclusive lifestyle.
                                             </p>
                                             <div class="feature-one__btn"><a href="javascript:void(0);" class="get-info"
                                                     data-label="Download Brochure" data-cta="Get Details"> <i
@@ -360,7 +403,7 @@
                                             <div class="feature-one__icon"><span class="icon-sustainable"></span></div>
                                             <h3 class="feature-one__title"><a href="javascript:void(0);">Elevated Living
                                             </a></h3>
-                                            <p class="feature-one__text"> A seamless blend of space and serenity, where modern luxury meets urban vibrancy in a home built for the extraordinary.</p>
+                                            <p class="feature-one__text">A seamless blend of space and serenity, where modern luxury meets urban vibrancy in a meticulously crafted home built for the extraordinary.</p>
                                             <div class="feature-one__btn"><a href="javascript:void(0);" class="get-info"
                                                     data-label="Download Brochure" data-cta="Get Details"> <i
                                                         class="fa fa-arrow-right"></i>Know More</a></div>
@@ -374,7 +417,7 @@
                                             <h3 class="feature-one__title"><a href="javascript:void(0);">Unparalleled Privacy
                                             </a></h3>
                                             <p class="feature-one__text">
-                                                One floor, one residence—offering unmatched exclusivity with breathtaking views overlooking 25 acres of open space.
+                                                One floor, one residence-offering unmatched exclusivity, serenity, grandeur, and sophistication with breathtaking views overlooking 25 acres of open space.
  
                                             </p>
                                             <div class="feature-one__btn"><a href="javascript:void(0);" class="get-info"
@@ -391,7 +434,7 @@
 
                                                     </a></h3>
                                             <p class="feature-one__text">
-                                                Wake up to grandeur in a thoughtfully designed home with expansive interiors, grand ceiling heights, and 10-feet clear height, elevating your living experience.
+                                                Wake up to grandeur in a thoughtfully designed home with expansive interiors and a grand 11 ft. 6 in. ceiling height, elevating your living experience.
                                             </p>
                                             <div class="feature-one__btn"><a href="javascript:void(0);" class="get-info"
                                                     data-label="Download Brochure" data-cta="Get Details"> <i
@@ -463,7 +506,7 @@
                     <span class="section-title__tagline">Project Configuration</span>
                     <h2 class="section-title__title">Apartment Plans</h2>
                     <p class="text-white floor-plan__text">
-                        Discover Progressive One, strategically located in the prime area of Vashi. Experience luxurious living in spacious homes seamlessly integrated with state-of-the-art technology, including voice-controlled automation in every apartment. Enjoy unparalleled security with advanced smart locks and video doorphones, all while taking in breathtaking views framed by sleek, invisible grills designed for both safety and style.
+                        Discover Progressive's One, strategically located in the prime area of Vashi. Experience luxurious living in spacious homes seamlessly integrated with state-of-the-art technology, including voice-controlled automation in every apartment. Enjoy unparalleled security with advanced smart locks and video doorphones, all while taking in breathtaking views framed by sleek, invisible grills designed for both safety and style.
                     </p>
                 </div>
                 <div class="floor-plan__main-tab-box tabs-box">
@@ -479,9 +522,9 @@
                                     <!-- Left content here (if any) -->
                                 </div>
                                 <div class="floor-plan__tab-content-righ">
-                                    <div class="gallery-two__single img-popup" href="assets/images/resources/one-plan2-01-2048x1481.jpg (1).webp" data-fancybox="configs">
+                                    <div class="gallery-two__single img-popup" href="assets/images/resources/one_planAsset_10.png" data-fancybox="configs">
                                         <div class="gallery-two__img">
-                                            <img src="assets/images/resources/one-plan2-01-2048x1481.jpg (1).webp" alt="">
+                                            <img src="assets/images/resources/one_planAsset_10.png" alt="">
                                             <div class="gallery-two__icon">
                                                 <a href="javascript:void(0);"><span class="fa fa-plus"></span></a>
                                             </div>
@@ -496,7 +539,7 @@
                                 <div class="floor-plan__tab-content-left">
                                     <!-- Left content here (if any) -->
                                 </div>
-                                <div class="floor-plan__tab-content-righ">
+                                <!-- <div class="floor-plan__tab-content-righ">
                                     <div class="gallery-two__single img-popup" href="" data-fancybox="configs">
                                         <div class="gallery-two__img">
                                             <img src="" alt="">
@@ -505,7 +548,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 
                                 
                                 
@@ -649,14 +692,18 @@
                         <div class="neighborhoods__left">
                             <div class="neighborhoods__faq">
                                 <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
-                                    <div class="accrodion">
+                                    <div class="accrodion active">
                                         <div class="accrodion-title">
-                                            <h4>Connectivity</h4>
+                                            <h4>CONNECTIVITY</h4>
                                         </div>
                                         <div class="accrodion-content">
                                             <div class="inner">
                                                 <table class="info-table">
                                                     <tbody>
+                                                        <tr>
+                                                            <td>Waterways & Bridges</td>
+                                                            <td>2.2 km</td>
+                                                        </tr>
                                                         <tr>
                                                             <td>Mumbai Trans-harbour Link</td>
                                                             <td>13.7 km</td>
@@ -665,10 +712,7 @@
                                                             <td>Navi Mumbai Airport</td>
                                                             <td>24.3 km</td>
                                                         </tr>
-                                                        <tr>
-                                                            <td>Waterways & Bridges</td>
-                                                            <td>2.2 km</td>
-                                                        </tr>
+                                                       
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -676,32 +720,12 @@
                                     </div>
                                     <div class="accrodion">
                                         <div class="accrodion-title">
-                                            <h4>Hotspots</h4>
+                                            <h4>HOTSPOT</h4>
                                         </div>
                                         <div class="accrodion-content">
                                             <div class="inner">
                                                 <table class="info-table">
                                                     <tbody>
-                                                        <tr>
-                                                            <td>Fortis Hospital</td>
-                                                            <td>5.6 km</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>MGM Hospital</td>
-                                                            <td>7.2 km</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>APMC Market</td>
-                                                            <td>3.4 km</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Inorbit Mall</td>
-                                                            <td>6.1 km</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Satra Plaza</td>
-                                                            <td>4.8 km</td>
-                                                        </tr>
                                                         <tr>
                                                             <td>Fr. Agnel School</td>
                                                             <td>2.5 km</td>
@@ -710,6 +734,31 @@
                                                             <td>Sacred Heart High School</td>
                                                             <td>3.0 km</td>
                                                         </tr>
+                                                        <tr>
+                                                            <td>APMC Market</td>
+                                                            <td>3.4 km</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Satra Plaza</td>
+                                                            <td>4.8 km</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Fortis Hospital</td>
+                                                            <td>5.6 km</td>
+                                                        </tr>
+                                                       
+                                                        
+                                                        <tr>
+                                                            <td>Inorbit Mall</td>
+                                                            <td>6.1 km</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>MGM Hospital</td>
+                                                            <td>7.2 km</td>
+                                                        </tr>
+                                                        
+                                                       
+                                                       
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -867,14 +916,15 @@
                                     <p class="contact-one__person-sub-title">Reg. No.</p>
                                 </div>
                             </div> -->
-                            <p class="contact-one__text-1">Whether you're a resident, investor, or channel partner, your voice matters to us. Share your thoughts, and together, let's shape the future of Progressive One into a landmark of luxury and innovation.!</p>
+                            <p class="contact-one__text-1">Whether you're a resident, investor, or channel partner, your voice matters to us. Share your thoughts, and together, let's shape the future of Progressive's one into a landmark of luxury and innovation.!</p>
                             <ul class="list-unstyled contact-one__list">
                                 <li>
                                     <div class="icon"><i class="fas fa-phone-alt"></i></div>
                                     <div class="content">
                                         <p class="white-clr">Have any questions to ask?</p>
                                         <h4> <span class="d-block">24x7</span> <br>
-                                            <p class="mb-2"><a href="tel:+91 98765 43210">+9167770104</a></p>
+                                            <p class="mb-2"><a href="tel:9167770104">91677 70104</a></p>
+                                            <p class="mb-2"><a href="tel:9167770114">91677 70114</a></p>
                                         </h4>
                                     </div>
                                 </li>
@@ -882,7 +932,7 @@
                                     <div class="icon"><i class="fas fa-envelope"></i></div>
                                     <div class="content">
                                         <p class="white-clr">Write to us for any queries</p>
-                                        <h4><a href="mailto:info@invictaeclat.com">sales@progressivegroup.in</a></h4>
+                                        <h4><a href="sales@progressivegroup.in">sales@progressivegroup.in</a></h4>
                                     </div>
                                 </li>
                             </ul>
@@ -892,7 +942,7 @@
                         <div class="contact-one__right">
                             <div class="row">
                                 <div class="contact-one__form-box">
-                                    <form action="api/service/contact-us" method="post"
+                                    <form action="api/service/contact-us.php" method="post"
                                         class="contact-one__form contact-one-validated theme-form">
                                         <div class="row">
                                             <div class="col-xl-12 col-lg-12 col-md-12">
@@ -929,7 +979,7 @@
                                                 <div class="contact-one__btn-box"><input type="hidden" name="sub"
                                                         value="General Contact"><button type="submit"
                                                         class="thm-btn contact-one__btn border-0">Send</button>
-                                                    <div class="response mt-2"></div>
+                                                    <div class="response mt-2 text-white"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1013,10 +1063,10 @@
                                     </div>
                                     <ul class="footer-widget__Contact-list list-unstyled">
                                         <li>
-                                            <div class="icon"><span class="fas fa-phone-alt"></span></div>
+                                            <div class="icon"><span class="fas fa-phone-alt nlt"></span></div>
                                             <div class="text">
-                                                <p><a href="tel:+9167770114">+9167770114</a></p>
-                                                <p><a href="tel:+9167770104">+9167770104</a></p>
+                                                <p><a href="tel:9167770104">91677 70104</a></p>
+                                                <p><a href="tel:9167770114">91677 70114</a></p>
                                             </div>
                                         </li>
                                     </ul>
@@ -1032,7 +1082,7 @@
                                     <ul class="footer-widget__Explore-list list-unstyled">
                                         <li>
                                             <a href="https://maps.app.goo.gl/arPXnPP1EejkwMTX8" target="_blank">
-                                                Progressive One, Sector 4, Vashi, Navi Mumbai,<br />Maharashtra 410206
+                                                Progressive's One, Sector 4, Vashi, Navi Mumbai,<br />Maharashtra 400703
                                             </a>
                                         </li>
                                     </ul>
@@ -1073,7 +1123,7 @@
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
                                 <p class="site-footer__bottom-text">
-                                    &copy; All Rights Reserved.
+                                    &copy;2025 Progressive Group. All Rights Reserved.
                                     <span class="d-block float-md-end small">
                                         Powered by <a href="https://tech2edge.co/" class="text-white" target="_blank">Tech2Edge</a>
                                     </span>
@@ -1084,7 +1134,7 @@
                 </div>
             </div>
         </footer>
-        
+    </section>
     </div>
     <div class="mobile-nav__wrapper">
         <div class="mobile-nav__overlay mobile-nav__toggler"></div>
@@ -1096,7 +1146,7 @@
             <div class="mobile-nav__container"></div>
             <ul class="mobile-nav__contact list-unstyled">
                 <li><i class="fa fa-envelope"></i><a href="mailto:sales@progressivegroup.in">sales@progressivegroup.in</a></li>
-                <li><i class="fa fa-phone-alt"></i><a href="tel:+9167773322">+9167773322</a></li>
+                <li><i class="fa fa-phone-alt"></i><a href="tel:9167770104">91677 70104</a></li>
             </ul>
             <div class="mobile-nav__top">
                 <div class="mobile-nav__social"><a href="" class="fab fa-facebook-square"></a><a href=""
@@ -1112,7 +1162,7 @@
         <ul>
             <li><a href="https://wa.me/+9167773322" class="bg-success" target="_blank"><i
                         class="fab fa-whatsapp my-float"></i></a></li>
-            <li><a href="mailto:info@invictaeclat.com" class="bg-danger"><i class="fa fa-envelope my-float"></i></a>
+            <li><a href="mailto:sales@progressivegroup.in" class="bg-danger"><i class="fa fa-envelope my-float"></i></a>
             </li>
             <li><a href="tel:++9167773322" class="bg-primary"><i class="fa fa-phone my-float"></i></a></li>
         </ul>
@@ -1136,7 +1186,7 @@
                                 Share your details now to seize the best deal and schedule your personalized visit.
                                 Your dream property awaits &#8211; let's make it yours!
                             </p>
-                            <form action="api/service/contact-us" method="post"
+                            <form action="api/service/contact-us.php" method="post"
                                 class="contact-one__form contact-one-validated theme-form">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12">
@@ -1169,7 +1219,7 @@
                                             <button type="submit" class="thm-btn contact-one__btn border-0 btn-axn">
                                                 Get Offer
                                             </button>
-                                            <div class="response mt-2"></div>
+                                            <div class="response mt-2 text-white"></div>
                                         </div>
                                     </div>
                                 </div>

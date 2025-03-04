@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $log_data .= "=================================================\n";
 
     // Send email
-    $to = "info@invictaeclat.com,sales@invictaeclat.com"; // Change this to your email address
+    $to = "sales@progressivegroup.in"; // Change this to your email address
     $subject = "New Enquiry";
     $message = $log_data;
     $headers = "From: $email";
