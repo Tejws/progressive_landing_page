@@ -81,6 +81,80 @@
                                 </a>
                             </div>
                         </div>
+                        <style>
+                            /* Prevent extra spacing on mobile */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure the header and menu do not cause overflow */
+.main-header, .main-menu {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .main-header__top-inner,
+    .main-menu__wrapper-inner {
+        flex-wrap: wrap; /* Ensure elements don't overflow */
+        justify-content: space-between;
+        padding: 0 15px; /* Add padding to prevent edge cutoff */
+    }
+
+    .main-header__top-left,
+    .main-header__top-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-header__top-left ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .main-header__top-left ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .main-menu__logo {
+        text-align: center;
+        width: 100%;
+    }
+
+    .main-menu__logo a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo-img, .logo-img2 {
+        max-width: 80%; /* Adjust the logo size */
+        height: auto;
+    }
+
+    .main-header__social {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .main-header__top-time {
+        text-align: center;
+        margin-top: 5px;
+    }
+}
+
+                        </style>
 <!-- <style>
     .logo-img {
     position: relative !important;
